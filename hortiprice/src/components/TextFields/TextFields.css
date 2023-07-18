@@ -1,0 +1,28 @@
+.text-fields{
+    margin: 24px 0;
+    
+}
+
+.text-fields label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.nome, .sobrenome, .sexo, .estado-civil, .cpf, .rg, .rua, .cidade, .estado, .pais, .email, .n-telefone, .senha{
+    width: 100%;
+}
+
+.numero-residencia, .complemento{
+    width: 100%;
+}
+
+.text-fields input{
+    background-color: #fff;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0.06);
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
