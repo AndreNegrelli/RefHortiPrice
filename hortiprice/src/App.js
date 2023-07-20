@@ -1,12 +1,12 @@
-import Banner from "./components/Banner";
-import RegisterForms from "./components/Forms/RegisterForms";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Banner from "./components/Banner";
+import RegisterForm from "./pages/Forms/RegisterForm";
 
 function App() {
   return (
     <div className="App">
       <Banner/>
-      <RegisterForms />
+      <RegisterForm/>
     </div>
   );
 }
