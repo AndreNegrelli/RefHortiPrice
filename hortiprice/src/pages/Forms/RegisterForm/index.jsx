@@ -10,14 +10,10 @@ const RegisterForm = () => {
   const genero = ["Masculino", "Feminino", "Outro", "Não informar"];
   const estadoCivil = ["Solteiro(a)", "Casado(a)", "Viuvo(a)"];
 
-  const onSave = (event) =>{
-    event.preventDefault()
-  }
-
   return (
     <section className='register-form'>
-      <Container className="container">
-        <form onSubmit={onSave}>
+      <Container>
+        <form>
         <h2>Preencha com os dados para se cadastrar</h2>
       <Row>
         <Col><TextFields  inputLength = {15} isRequired={true} inputClassName="nome"  label="Nome" placeholder="Digite seu nome." /></Col>

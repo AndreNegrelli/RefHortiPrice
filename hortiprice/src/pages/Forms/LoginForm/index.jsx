@@ -11,7 +11,7 @@ const LoginForm = () => {
                 <h2>Preencha com seus dados para logar</h2>
                 <TextFields inputLength = {50} isRequired={true} inputClassName="email" label="E-mail" placeholder="Digite seu E-mail." />
                 <TextFields inputLength = {15} isRequired={true} inputClassName="senha" label="Senha" placeholder="Digite sua senha." />
-                <Buttons text = "Logar"/>
+                <Buttons customButton="button-login" text = "Logar"/>
             </form>
        </section>
     )

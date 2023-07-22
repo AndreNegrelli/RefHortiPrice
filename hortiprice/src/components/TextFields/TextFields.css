@@ -17,6 +17,14 @@
     width: 100%;
 }
 
+.message{
+    width: 100%;
+}
+
+.area, .categoria{
+    width: 100%;
+}
+
 .text-fields input{
     background-color: #fff;
     box-shadow: 4px 4px 6px rgba(0, 0, 0.06);

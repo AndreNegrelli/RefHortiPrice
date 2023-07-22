@@ -3,7 +3,7 @@ import "./Button.css"
 
 const Buttons = (props) => {
     return(
-        <button className="button">
+        <button className={`button ${props.customButton}`}>
             {props.text}
         </button>
     )

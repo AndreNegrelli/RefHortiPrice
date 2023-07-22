@@ -12,6 +12,24 @@
     
 }
 
+.button-contato{
+    margin-left: 230px;
+}
+
+.button-login{
+    margin-left: 150px;
+}
+
+.button-area{
+    margin-left: 85px;
+    width: 150px;
+}
+
+.button-category{
+    margin-left: 115px;
+    width: 150px;
+}
+
 .button:hover{
     color: #7dd17d;
 }
