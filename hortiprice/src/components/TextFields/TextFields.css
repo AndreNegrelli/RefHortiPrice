@@ -17,11 +17,7 @@
     width: 100%;
 }
 
-.message{
-    width: 100%;
-}
-
-.area, .categoria{
+.area, .categoria, .subcategoria, .custo, .message, .tipo{
     width: 100%;
 }
 

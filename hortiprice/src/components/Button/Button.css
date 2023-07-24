@@ -30,6 +30,21 @@
     width: 150px;
 }
 
+.button-subcategory{
+    margin-left: 145px;
+    width: 150px;
+}
+
+.button-cost{
+    margin-left: 95px;
+    width: 150px;
+}
+
+.button-typeform{
+    margin-left: 95px;
+    width: 150px
+}
+
 .button:hover{
     color: #7dd17d;
 }
