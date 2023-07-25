@@ -8,20 +8,9 @@
     margin-bottom: 8px;
     font-size: 24px;
 }
-
-.nome, .sobrenome, .sexo, .estado-civil, .cpf, .rg, .rua, .cidade, .estado, .pais, .email, .n-telefone, .senha{
-    width: 100%;
-}
-
-.numero-residencia, .complemento{
-    width: 100%;
-}
-
-.area, .categoria, .subcategoria, .custo, .message, .tipo{
-    width: 100%;
-}
-
+    
 .text-fields input{
+    width: 100%;
     background-color: #fff;
     box-shadow: 4px 4px 6px rgba(0, 0, 0.06);
     border: none;

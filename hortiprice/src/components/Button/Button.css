@@ -9,7 +9,6 @@
     color: #FFF;
     margin: 8px;
     margin-left: 325px;
-    
 }
 
 .button-contato{
@@ -35,14 +34,18 @@
     width: 150px;
 }
 
-.button-cost{
+.button-cost, .button-typeform, .button-number{
     margin-left: 95px;
     width: 150px;
 }
 
-.button-typeform{
-    margin-left: 95px;
-    width: 150px
+.button-componentform{
+    width: 150px;
+}
+
+.button-productivityform{
+    margin-left: 190px;
+    width: 150px;
 }
 
 .button:hover{

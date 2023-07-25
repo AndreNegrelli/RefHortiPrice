@@ -7,6 +7,9 @@ import CategoryForm from "../../pages/Forms/CategoryForm";
 import SubcategoryForm from "../../pages/Forms/SubcategoryForm";
 import CostForm from "../../pages/Forms/CostForm";
 import TypeForm from "../../pages/Forms/TypeForm";
+import NumberForm from "../../pages/Forms/NumberForm";
+import ComponentForm from "../../pages/Forms/ComponentForm";
+import ProductivityForm from "../../pages/Forms/Productivity.jsx";
 
 const Routing = () => {
     return(
@@ -20,6 +23,9 @@ const Routing = () => {
                 <Route element = {<SubcategoryForm/>} path="/subcategoria"/>
                 <Route element = {<CostForm/>} path="/custo"/>
                 <Route element = {<TypeForm/>} path="/tipo"/>
+                <Route element = {<NumberForm/>} path="/unidade"/>
+                <Route element = {<ComponentForm/>} path="/componente"/>
+                <Route element = {<ProductivityForm/>} path="/produtividade"/>
             </Routes>
         </BrowserRouter>
     )
