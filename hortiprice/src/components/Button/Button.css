@@ -48,6 +48,22 @@
     width: 150px;
 }
 
+.button-redirector{
+    margin-left: 128px;
+}
+
+.button-activityform{
+    margin-left: 160px;
+}
+
+.button-absortioncosting{
+    margin-left: 100px;
+}
+
+.button-variablecosting, .button-costingabc{
+    margin-left: 80px;
+}
+
 .button:hover{
     color: #7dd17d;
 }

@@ -9,7 +9,12 @@ import CostForm from "../../pages/Forms/CostForm";
 import TypeForm from "../../pages/Forms/TypeForm";
 import NumberForm from "../../pages/Forms/NumberForm";
 import ComponentForm from "../../pages/Forms/ComponentForm";
-import ProductivityForm from "../../pages/Forms/Productivity.jsx";
+import ProductivityForm from "../../pages/Forms/Productivity";
+import RedirectorForm from "../../pages/Forms/RedirectorForm";
+import ActivityForm from "../../pages/Forms/ActivityForm";
+import CostingABC from "../../pages/Simulations/CostingABC";
+import AbsortionCosting from "../../pages/Simulations/AbsorptionCosting";
+import VariableCosting from "../../pages/Simulations/VariableCosting";
 
 const Routing = () => {
     return(
@@ -26,6 +31,11 @@ const Routing = () => {
                 <Route element = {<NumberForm/>} path="/unidade"/>
                 <Route element = {<ComponentForm/>} path="/componente"/>
                 <Route element = {<ProductivityForm/>} path="/produtividade"/>
+                <Route element = {<RedirectorForm/>} path="/direcionador"/>
+                <Route element = {<ActivityForm/>} path="/atividade"/>
+                <Route element = {<CostingABC/>} path="/custo-abc"/>
+                <Route element = {<AbsortionCosting/>} path="/custo-absorcao"/>
+                <Route element = {<VariableCosting/>} path="/custo-variavel"/>
             </Routes>
         </BrowserRouter>
     )
