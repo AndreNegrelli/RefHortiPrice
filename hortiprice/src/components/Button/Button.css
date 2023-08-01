@@ -48,7 +48,7 @@
     width: 150px;
 }
 
-.button-redirector{
+.button-redirector, .button-totalreport{
     margin-left: 128px;
 }
 
@@ -60,8 +60,12 @@
     margin-left: 100px;
 }
 
-.button-variablecosting, .button-costingabc{
+.button-variablecosting, .button-costingabc, .button-costreport, .button-abcreport{
     margin-left: 80px;
+}
+
+.button-costunit{
+    margin-left: 110px;
 }
 
 .button:hover{

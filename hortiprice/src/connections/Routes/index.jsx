@@ -15,6 +15,10 @@ import ActivityForm from "../../pages/Forms/ActivityForm";
 import CostingABC from "../../pages/Simulations/CostingABC";
 import AbsortionCosting from "../../pages/Simulations/AbsorptionCosting";
 import VariableCosting from "../../pages/Simulations/VariableCosting";
+import CostReport from "../../pages/Reports/CostReport";
+import UnitCostReport from "../../pages/Reports/UnitCostReport";
+import ABCReport from "../../pages/Reports/ABCReport";
+import TotalsReport from "../../pages/Reports/TotalsReport";
 
 const Routing = () => {
     return(
@@ -36,6 +40,10 @@ const Routing = () => {
                 <Route element = {<CostingABC/>} path="/custo-abc"/>
                 <Route element = {<AbsortionCosting/>} path="/custo-absorcao"/>
                 <Route element = {<VariableCosting/>} path="/custo-variavel"/>
+                <Route element = {<CostReport/>} path="/relatorio-custo"/>
+                <Route element = {<UnitCostReport/>} path="/relatorio-unitario"/>
+                <Route element = {<ABCReport/>} path="/relatorio-abc"/>
+                <Route element = {<TotalsReport/>} path="/relatorio-total"/>
             </Routes>
         </BrowserRouter>
     )
