@@ -19,12 +19,14 @@ import CostReport from "../../pages/Reports/CostReport";
 import UnitCostReport from "../../pages/Reports/UnitCostReport";
 import ABCReport from "../../pages/Reports/ABCReport";
 import TotalsReport from "../../pages/Reports/TotalsReport";
+import ForgotPasswordForm from "../../pages/Forms/ForgotPasswordForm";
+import ChangePasswordForm from "../../pages/Forms/ChangePasswordForm";
 
 const Routing = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route element = {<RegisterForm/>}  path="/" exact/>
+                <Route element = {<RegisterForm/>}  path="/registro" exact/>
                 <Route element = {<LoginForm/>} path="/login"/>
                 <Route element = {<ContactForm/>} path="/contato"/>
                 <Route element = {<AreaForm/>} path="/area"/>
@@ -44,6 +46,8 @@ const Routing = () => {
                 <Route element = {<UnitCostReport/>} path="/relatorio-unitario"/>
                 <Route element = {<ABCReport/>} path="/relatorio-abc"/>
                 <Route element = {<TotalsReport/>} path="/relatorio-total"/>
+                <Route element = {<ForgotPasswordForm/>} path="/formulario-senha"/>
+                <Route element = {<ChangePasswordForm/>} path="/formulario-mudarsenha"/>
             </Routes>
         </BrowserRouter>
     )

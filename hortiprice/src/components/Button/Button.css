@@ -64,8 +64,12 @@
     margin-left: 80px;
 }
 
-.button-costunit{
+.button-costunit, .button-changepassword{
     margin-left: 110px;
+}
+
+.button-forgotpassword{
+    margin-left: 235px;
 }
 
 .button:hover{
