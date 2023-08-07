@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./RegisterForm.css";
 import {Container, Row, Col} from 'react-bootstrap';
-import LoginForm from '../LoginForm';
 import TextFields from "../../../components/TextFields";
 import DropdownLists from "../../../components/DropdownLists";
 import Buttons from '../../../components/Button';
@@ -46,7 +45,7 @@ const RegisterForm = () => {
             <Col><TextFields inputLength = {15} isRequired={true} inputClassName="senha" label="Senha" placeholder="Digite uma senha." /></Col>
           </Row>
           <Buttons text = "Registrar-se"/>
-          <Link to='/login'>Ja possui conta ?</Link>
+          <Link className='link' to='/login'>Ja possui conta ?</Link>
       </form>
     </Container>
     </section>

@@ -16,10 +16,10 @@ const LoginForm = () => {
                         <TextFields inputLength = {15} isRequired={true} inputClassName="senha" label="Senha" placeholder="Digite sua senha." />
                      </Row>
                      <Row>
-                        <Link to='' className='forgot-password'>Esqueceu a senha ?</Link>
+                        <Link className='link'  to='/formulario-senha'>Esqueceu a senha ?</Link>
                      </Row>
                     <Buttons customButton="button-login" text = "Logar"/>
-                    <Link to='/registro' className='forgot-password'>Não possui conta ?</Link>
+                    <Link className='link' to='/registro'>Não possui conta ?</Link>
              </form>
         </Container>
            

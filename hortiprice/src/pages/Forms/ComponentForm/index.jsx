@@ -11,7 +11,7 @@ const ComponentForm = () => {
     
     return (
         <section className="component-form">
-            <Container>
+            <Container className="container">
                  <form>
                     <h2>Cadastre um novo componente</h2>
                     <Row>
