@@ -21,6 +21,9 @@ import ABCReport from "../../pages/Reports/ABCReport";
 import TotalsReport from "../../pages/Reports/TotalsReport";
 import ForgotPasswordForm from "../../pages/Forms/ForgotPasswordForm";
 import ChangePasswordForm from "../../pages/Forms/ChangePasswordForm";
+import Footer from "../../components/Footer";
+
+
 
 const Routing = () => {
     return(
@@ -49,6 +52,7 @@ const Routing = () => {
                 <Route element = {<ForgotPasswordForm/>} path="/formulario-senha"/>
                 <Route element = {<ChangePasswordForm/>} path="/formulario-mudarsenha"/>
             </Routes>
+            <Footer/>
         </BrowserRouter>
     )
 }

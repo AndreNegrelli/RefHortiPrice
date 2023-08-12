@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Routing from './connections/Routes';
-import Banner from './components/Banner';
-import Foot from './components/Foot';
+import Header from './components/Header';
+import './App.css';
+
 function App() {
   return (
     <div className="App">
-      <Banner/>
+      <Header/>
       <Routing/>
-      <Foot/>
     </div>
   );
 }

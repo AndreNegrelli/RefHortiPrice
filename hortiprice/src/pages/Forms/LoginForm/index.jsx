@@ -2,7 +2,7 @@ import './LoginForm.css'
 import Buttons from '../../../components/Button';
 import TextFields from '../../../components/TextFields';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row} from 'react-bootstrap';
 
 
 const LoginForm = () => {

@@ -5,7 +5,7 @@ const DropdownLists = (props) => {
             <div className='dropdown-lists'>
                 <label>{props.label}</label>
                 <select>
-                    {props.itens.map(item => <option key={item}>{item}</option>)}
+                    {props.itens.map(item => <option key={item}> {item} </option>)}
                 </select>
             </div>
 
@@ -13,3 +13,4 @@ const DropdownLists = (props) => {
 }
 
 export default DropdownLists
+
