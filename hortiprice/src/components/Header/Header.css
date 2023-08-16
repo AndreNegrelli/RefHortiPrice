@@ -1,43 +1,18 @@
-.banner{
+.header{
     background-color: #3FDD58;
     text-align: center;
     max-width: 100%;
 }
 
-.wrapper-banner{
-    display: flex;
-    
-}
 
 .img-header img{
     max-width: 100%;    
 }
 
-.links-banner{
-    font-weight: 500;
-    font-size: 13px;
-    text-align: left;
+.nav-area {
     display: flex;
-    margin-right: 100px;
-    padding: 10px;
-}
-
-.links-banner p{
-    font-size: 18px;
-    max-width: 100%;
-}
-
-.link-banner{
-    color: black;
-}
-
-.select{
-    background-color: #fff;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0.06);
-    width: 100%;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }

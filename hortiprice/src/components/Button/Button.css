@@ -34,9 +34,14 @@
     width: 150px;
 }
 
-.button-cost, .button-typeform, .button-number{
+.button-typeform{
     margin-left: 95px;
     width: 150px;
+}
+
+.button-number{
+    margin-left: 65px;
+    width: 100px;
 }
 
 .button-componentform{
@@ -70,6 +75,10 @@
 
 .button-forgotpassword{
     margin-left: 235px;
+}
+
+.button-cost{
+    margin-left: 515px;
 }
 
 .button:hover{

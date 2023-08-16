@@ -1,4 +1,4 @@
-import { menuItems } from "../../menuItems"
+import { menuItems } from "../MenuItems/menuItems"
 import MenuItems from "../MenuItems"
 
 const Navbar = () => {

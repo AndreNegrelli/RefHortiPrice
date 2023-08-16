@@ -22,12 +22,14 @@ import TotalsReport from "../../pages/Reports/TotalsReport";
 import ForgotPasswordForm from "../../pages/Forms/ForgotPasswordForm";
 import ChangePasswordForm from "../../pages/Forms/ChangePasswordForm";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 
 
 const Routing = () => {
     return(
         <BrowserRouter>
+        <Header/>
             <Routes>
                 <Route element = {<RegisterForm/>}  path="/registro" exact/>
                 <Route element = {<LoginForm/>} path="/login"/>
