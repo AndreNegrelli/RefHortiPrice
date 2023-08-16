@@ -2,7 +2,7 @@ import DropdownLinks from "../DropdownLinks"
 import { useState, useEffect, useRef } from "react";
 import './MenuItems.css'
 
-const MenuItems = ({items, depthLevel}) => {
+const MenuItems = ({items}) => {
     const [dropdown, setDropdown] = useState(false)
     let ref = useRef()
 
