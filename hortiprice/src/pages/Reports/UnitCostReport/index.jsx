@@ -5,7 +5,7 @@ import "./UnitCostReport.css"
 
 const UnitCostReport = () => {
 
-    const teste = ["teste1", "teste2"];
+    const teste = ["Escolha sua opção", "teste2"];
 
     return (
         <section className="cost-unit">
