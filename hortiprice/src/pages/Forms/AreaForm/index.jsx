@@ -10,8 +10,8 @@ import { useState } from "react";
 const AreaForm = () => {
     const [descricao, setDescricao] = useState("")
 
-
-    async function cadastrarArea(){
+    async function cadastrarArea(e){
+        e.preventDefault()
         await addDoc(collection(db, "area"), {
             descricao: descricao
         })
@@ -23,14 +23,13 @@ const AreaForm = () => {
         })
     }
 
-
     return (
         <section className="area-form">
             <Container>
-                <form>
+                <form onSubmit={cadastrarArea}>
                     <h2>Cadastre novas areas</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="area"  label="Area" placeholder="Digite aqui a nova area." 
-                     teste = {setDescricao} value = {descricao}/>
+                     setter = {setDescricao} value = {descricao}/>
                     <Buttons  customButton = "button-area" text="Inserir" funcaoBotao = {cadastrarArea}  />
                 </form>
             </Container>

@@ -6,7 +6,7 @@ const TextFields = (props) => {
         <div className={`text-fields ${props.customClassName}`}>
             <label>{props.label}</label>
             <input type="text" maxLength={props.inputLength} required={props.isRequired} className={`input-field ${props.inputClassName}`} placeholder={props.placeholder} value={props.value}
-            onChange={(e) => props.teste(e.target.value)}/>
+            onChange={(e) => props.setter(e.target.value)}/>
         </div>
     )
 

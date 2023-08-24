@@ -11,16 +11,32 @@ export const menuItems = [
                 url: 'area'
             },
             {
+                title: 'Atividade',
+                url: 'atividade'
+            },
+            {
                 title: 'Categoria',
                 url: 'categoria'
             },
             {
-                title: 'Subcategoria',
-                url: 'subcategoria'
+                title: 'Componente',
+                url: 'componente'
             },
             {
                 title: 'Custo',
                 url: 'custo'
+            },
+            {
+                title: 'Direcionador',
+                url: 'direcionador'
+            },
+            {
+                title: 'Produtividade',
+                url: 'produtividade'
+            },
+            {
+                title: 'Subcategoria',
+                url: 'subcategoria'
             },
             {
                 title: 'Tipo',
@@ -30,22 +46,6 @@ export const menuItems = [
                 title: 'Unidade',
                 url: 'unidade'
             },
-            {
-                title: 'Componente',
-                url: 'componente'
-            },
-            {
-                title: 'Produtividade',
-                url: 'produtividade'
-            },
-            {
-                title: 'Direcionador',
-                url: 'direcionador'
-            },
-            {
-                title: 'Atividade',
-                url: 'atividade'
-            }
         ]
     },
     {

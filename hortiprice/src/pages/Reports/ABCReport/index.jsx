@@ -9,10 +9,11 @@ import {collection,getDocs} from 'firebase/firestore'
 const ABCReport = () => {
 
     const teste = ["teste1", "teste2"];
-    const [custeioABC, setCustoABC] = useState([]);
+    const [relatorioabc, setRelatorioABC] = useState([]);
 
-    async function buscarABC() {
-      const postsRef = collection(db, "custeioabc");
+    async function searchABC(e) {
+      e.preventDefault()
+      const postsRef = collection(db, "relatorioabc");
       await getDocs(postsRef)
         .then((snapshot) => {
           let lista = [];
@@ -23,13 +24,14 @@ const ABCReport = () => {
               atividade: doc.data().atividade,
               custoatividade: doc.data().custoatividade,
               direcionador: doc.data().direcionador,
-              quantidade: doc.quantidade,
+              custodirecionador: doc.data().custodirecionador,
+              quantidade: doc.data().quantidade,
               titulo: doc.data().titulo,
               autor: doc.data().autor,
             });
           });
   
-          setCustoABC(lista);
+          setRelatorioABC(lista);
         })
         .catch((error) => {
           console.log("DEU ALGUM ERRO AO BUSCAR");
@@ -39,30 +41,24 @@ const ABCReport = () => {
     return (
       <section className="abc-report">
         <Container>
-          <form>
+          <form onSubmit={searchABC}>
             <h2>Relatorio Custo ABC</h2>
             <DropdownLists
               inputClassName="relatorio-abc"
               label="Tipo"
               itens={teste}
             />
-            <Buttons customButton="button-abcreport" text="Consultar" funcaoBotao ={buscarABC}  />
+            <Buttons customButton="button-abcreport" text="Consultar" funcaoBotao ={searchABC}  />
             <ul>
-              {custeioABC.map((custeioABC) => {
+              {relatorioabc.map((relatorioabc) => {
                 return (
-                  <li key={custeioABC.id}>
-                    <strong>ID: {custeioABC.id}</strong> <br />
-                    <span>Atividade: {custeioABC.atividade} </span> <br />
-                    <span>
-                      Custo da Atividade: {custeioABC.custoatividade}
-                    </span>{" "}
-                    <br />
-                    <span>Direcionador: {custeioABC.direcionador}</span> <br />
-                    <span>Quantidade: {custeioABC.quantidade}</span> <br />
-                    <span>
-                      Custo do Direcionador: {custeioABC.custoadirecionador}
-                    </span>{" "}
-                    <br />
+                  <li key={relatorioabc.id}>
+                    <strong>ID: {relatorioabc.id}</strong> <br />
+                    <span>Atividade: {relatorioabc.atividade} </span> <br />
+                    <span>Custo da Atividade: {relatorioabc.custoatividade}</span>{" "} <br />
+                    <span>Direcionador: {relatorioabc.direcionador}</span> <br />
+                    <span>Quantidade: {relatorioabc.quantidade}</span> <br />
+                    <span>Custo do Direcionador: {relatorioabc.custoadirecionador}</span>{" "}<br />
                   </li>
                 );
               })}
