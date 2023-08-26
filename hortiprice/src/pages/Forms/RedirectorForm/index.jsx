@@ -30,7 +30,7 @@ const RedirectorForm = () => {
                 <form onSubmit={cadastrarDirecionador}>
                     <h2>Campo do direcionador</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="direcionador"  label="Direcionador" placeholder="Descrição."
-                    value={direcionador} setter={setDirecionador} />
+                    value={direcionador} setter={setDirecionador} onlyLetters />
                     <Buttons  customButton = "button-redirector" text="Inserir"  />
                 </form>
             </Container>

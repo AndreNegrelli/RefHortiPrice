@@ -23,6 +23,7 @@ import ForgotPasswordForm from "../../pages/Forms/ForgotPasswordForm";
 import ChangePasswordForm from "../../pages/Forms/ChangePasswordForm";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Help from "../../pages/Help";
 
 
 
@@ -44,15 +45,16 @@ const Routing = () => {
                 <Route element = {<ProductivityForm/>} path="/produtividade"/>
                 <Route element = {<RedirectorForm/>} path="/direcionador"/>
                 <Route element = {<ActivityForm/>} path="/atividade"/>
-                <Route element = {<CostingABC/>} path="/custo-abc"/>
-                <Route element = {<AbsortionCosting/>} path="/custo-absorcao"/>
-                <Route element = {<VariableCosting/>} path="/custo-variavel"/>
-                <Route element = {<CostReport/>} path="/relatorio-custo"/>
-                <Route element = {<UnitCostReport/>} path="/relatorio-unitario"/>
-                <Route element = {<ABCReport/>} path="/relatorio-abc"/>
-                <Route element = {<TotalsReport/>} path="/relatorio-total"/>
-                <Route element = {<ForgotPasswordForm/>} path="/formulario-senha"/>
-                <Route element = {<ChangePasswordForm/>} path="/formulario-mudarsenha"/>
+                <Route element = {<CostingABC/>} path="/custoabc"/>
+                <Route element = {<AbsortionCosting/>} path="/custoabsorcao"/>
+                <Route element = {<VariableCosting/>} path="/custovariavel"/>
+                <Route element = {<CostReport/>} path="/relatoriocusto"/>
+                <Route element = {<UnitCostReport/>} path="/relatoriounitario"/>
+                <Route element = {<ABCReport/>} path="/relatorioabc"/>
+                <Route element = {<TotalsReport/>} path="/relatoriototal"/>
+                <Route element = {<ForgotPasswordForm/>} path="/esqueceusenha"/>
+                <Route element = {<ChangePasswordForm/>} path="/mudarsenha"/>
+                <Route element = {<Help/>} path="/ajuda"/>
             </Routes>
             <Footer/>
         </BrowserRouter>

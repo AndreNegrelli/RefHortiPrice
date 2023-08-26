@@ -1,4 +1,4 @@
-export const menuItems = [
+export const menuItemsHeader = [
     {
         title: 'Home',
         url:'/'
@@ -53,15 +53,15 @@ export const menuItems = [
         submenu:[
             {
                 title: 'Custeio ABC',
-                url: 'custo-abc'
+                url: 'custoabc'
             },
             {
                 title: 'Custeio por Absorção',
-                url: 'custo-absorcao'
+                url: 'custoabsorcao'
             },
             {
                 title: 'Custeio Variavel',
-                url: 'custo-variavel'
+                url: 'custovariavel'
             }
         ]
     },
@@ -70,19 +70,19 @@ export const menuItems = [
         submenu:[
             {
                 title: 'Custo de Produção',
-                url: 'relatorio-custo'
+                url: 'relatoriocusto'
             },
             {
                 title: 'Custo Unitario',
-                url: 'relatorio-unitario'
+                url: 'relatoriounitario'
             },
             {
                 title: 'Custo ABC',
-                url: 'relatorio-abc'
+                url: 'relatorioabc'
             },
             {
                 title: 'Total por Custo',
-                url: 'relatorio-total'
+                url: 'relatoriototal'
             }
             
         ]

@@ -26,7 +26,7 @@ const SubcategoryForm = () => {
                 <form onSubmit={cadastrarSubcategoria}>
                     <h2>Cadastre novas subcategorias</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="subcategoria"  label="Subcategoria" placeholder="Digite aqui a nova subcategoria." 
-                    value={subcategoria} setter={setSubcategoria} />
+                    value={subcategoria} setter={setSubcategoria} onlyLetters />
                     <Buttons  subcategoriamButtn = "button-subcategory" text="Inserir" funcaoBotao={cadastrarSubcategoria}  />
                 </form>
             </Container>

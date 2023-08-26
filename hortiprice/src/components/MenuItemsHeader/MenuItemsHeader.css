@@ -1,4 +1,4 @@
-.menus {
+.menus-header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -39,6 +39,6 @@
   
   .menu-items a:hover,
   .menu-items button:hover {
-    background-color: #f2f2f2;
+    background-color: #fffdfd;
   }
   

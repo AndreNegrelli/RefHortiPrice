@@ -37,13 +37,13 @@ const ProductivityForm = () => {
                     <h2>Cadastro de produtividade</h2>
                     <Row>  
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="valor-produtividade"  label="Valor" placeholder="Valor."
-                        value={valor} setter={setValor} /></Col>
+                        value={valor} setter={setValor} onlyNumbers /></Col>
                     </Row>
                     <Row>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="mes-componente"  label="Mês" placeholder="Mês."
-                        value={mes} setter={setMes} /></Col>
+                        value={mes} setter={setMes} onlyLetters /></Col>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="ano-componente"  label="Ano" placeholder="Ano."
-                        value={ano} setter={setAno} /></Col>
+                        value={ano} setter={setAno} onlyNumbers /></Col>
                     </Row>
                     <DropdownLists inputClassName="tipo-produtividade" label="Tipo" itens={teste}/>
                     <Buttons  customButton = "button-productivityform" text="Inserir" funcaoBotao={cadastrarProdutividade}  />

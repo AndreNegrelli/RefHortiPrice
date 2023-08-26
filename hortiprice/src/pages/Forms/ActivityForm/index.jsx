@@ -35,9 +35,9 @@ const ActivityForm = () => {
                  <form onSubmit={cadastrarAtividade}>
                     <h2>Cadastre uma nova atividade</h2>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="descrição-atividade"  label="Descrição" placeholder="Descrição."
-                        value = {descricao} setter = {setDescricao} /></Col>
+                        value = {descricao} setter = {setDescricao} onlyLetters  /></Col>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="quantidade-atividade"  label="Quantidade" placeholder="Quantidade."
-                         value = {quantidade} setter ={setQuantidade}/></Col>
+                         value = {quantidade} setter ={setQuantidade } onlyNumbers /></Col>
                     <Row>
                         <Col><DropdownLists inputClassName="custo-atividade" label="Custo" itens={teste}/></Col>
                         <Col><DropdownLists inputClassName="direcionador-atividade" label="Direcionador" itens={teste}/></Col>

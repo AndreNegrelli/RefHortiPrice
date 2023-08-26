@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import Navbar from "../Navbar";
 import './Header.css'
+import NavbarHeader from "../NavbarHeader";
 
 
 const Header = () => {
@@ -8,14 +8,13 @@ const Header = () => {
   return (
     <Container className="header"> 
       <div className="img-header">
-        <img src="/images/header_horti.png" alt="rodape principal"/>
+        <img src="/images/header_horti.png" alt="header principal"/>
       </div>
       <header>
       <div className='nav-area'>
-        <Navbar/>
+        <NavbarHeader/>
       </div>
     </header>
-
     </Container>
     
   );

@@ -1,8 +1,8 @@
 import DropdownLinks from "../DropdownLinks"
 import { useState, useEffect, useRef } from "react";
-import './MenuItems.css'
+import './MenuItemsHeader.css'
 
-const MenuItems = ({items}) => {
+const MenuItemsHeader = ({items}) => {
     const [dropdown, setDropdown] = useState(false)
     let ref = useRef()
 
@@ -46,4 +46,4 @@ const MenuItems = ({items}) => {
     )
 }
 
-export default MenuItems
+export default MenuItemsHeader

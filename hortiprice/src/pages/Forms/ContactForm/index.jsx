@@ -39,12 +39,12 @@ const ContactForm = () => {
         <form onSubmit={Contato}>
             <h2>Preencha com seus dados para entrar em contato</h2>
             <TextFields inputLength = {15} isRequired = {true} inputClassName="nome"  label="Nome" placeholder="Digite seu nome."
-            value={nome} setter={setNome} />
+            value={nome} setter={setNome}  onlyLetters />
             <TextFields inputLength = {15} isRequired = {true} inputClassName="sobrenome" label ="Sobrenome" placeholder="Digite seu sobrenome."
-            value={sobrenome} setter={setSobrenome} />
+            value={sobrenome} setter={setSobrenome} onlyLetters />
             <TextFields inputLength = {50} isRequired = {true} inputClassName="email" label="E-mail" placeholder="Digite seu E-mail."
             value={email} setter={setEmail} />
-            <TextFields inputLength = {100} isRequired = {true} inputClassName="mensagemsage" label="Mensagem" placeholder="Escreva sua mensagem"
+            <TextFields inputLength = {100} isRequired = {true} inputClassName="mensagem" label="Mensagem" placeholder="Escreva sua mensagem"
             value={mensagem} setter={setMensagem}  />
             <Buttons customButton="button-contato" text = "Enviar" funcaoBotao={Contato}/>
         </form>

@@ -29,7 +29,7 @@ const AreaForm = () => {
                 <form onSubmit={cadastrarArea}>
                     <h2>Cadastre novas areas</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="area"  label="Area" placeholder="Digite aqui a nova area." 
-                     setter = {setDescricao} value = {descricao}/>
+                     setter = {setDescricao} value = {descricao} onlyLetters/>
                     <Buttons  customButton = "button-area" text="Inserir" funcaoBotao = {cadastrarArea}  />
                 </form>
             </Container>

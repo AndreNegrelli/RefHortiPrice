@@ -8,7 +8,6 @@ const DropdownLists = (props) => {
                     {props.itens.map(item => <option key={item} > {item} </option>)}
                 </select>
             </div>
-
     )
 }
 

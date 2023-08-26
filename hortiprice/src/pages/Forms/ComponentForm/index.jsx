@@ -48,17 +48,17 @@ const ComponentForm = () => {
                     <h2>Cadastre um novo componente</h2>
                     <Row>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="descrição-componente"  label="Descrição" placeholder="Descrição."
-                        value ={descricao} setter={setDescricao} /></Col>
+                        value ={descricao} setter={setDescricao} onlyLetters /></Col>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="quantidade-componente"  label="Quantidade" placeholder="Quantidade."
-                        value={quantidade} setter={setQuantidade} /></Col>
+                        value={quantidade} setter={setQuantidade} onlyNumbers /></Col>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="valor-componente"  label="Valor" placeholder="Valor."
-                        value={valor} setter={setValor} /></Col>
+                        value={valor} setter={setValor} onlyNumbers /></Col>
                     </Row>
                     <Row>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="mes-componente"  label="Mês" placeholder="Mês."
-                        value={mes} setter={setMes} /></Col>
+                        value={mes} setter={setMes}  onlyLetters /></Col>
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="ano-componente"  label="Ano" placeholder="Ano."
-                        value={ano} setter={setAno} /></Col>
+                        value={ano} setter={setAno}  onlyNumbers /></Col>
                     </Row>
                     <Row>
                         <Col><DropdownLists inputClassName="unidade-componente" label="Unidade" itens={teste}/></Col>

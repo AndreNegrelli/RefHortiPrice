@@ -11,8 +11,8 @@ import { useState } from "react";
 
 const RegisterForm = () => {
 
-  const listaGenero = ["Masculino", "Feminino", "Outro", "Não informar"]
-  const listaEstadoCivil =  ["Solteiro(a)", "Casado(a)", "Viuvo(a)"]
+  const listaGenero = ["Escolha uma das opções","Masculino", "Feminino", "Outro", "Não informar"]
+  const listaEstadoCivil = ["Escolha uma das opções","Solteiro(a)", "Casado(a)", "Viuvo(a)"]
   const [genero, setGenero] = useState(listaGenero)
   const [estadoCivil, setEstadoCivil] = useState(listaEstadoCivil)
   const [nome, setNome] = useState("");
@@ -52,8 +52,8 @@ const RegisterForm = () => {
       .then(() => {
         setNome("")
         setSobrenome("")
-        setGenero(listaGenero)
-        setEstadoCivil(listaEstadoCivil)
+        setGenero("")
+        setEstadoCivil("")
         setCPF("")
         setRG("")
         setRua("")
@@ -76,44 +76,44 @@ const RegisterForm = () => {
           <h2>Preencha com os dados para se cadastrar</h2>
           <Row>
             <Col><TextFields  inputLength = {15} isRequired={true} inputClassName="nome"  label="Nome" placeholder="Digite seu nome."
-            value={nome} setter={setNome} /></Col>
+            value={nome} setter={setNome} onlyLetters/></Col>
             <Col><TextFields inputLength = {15} isRequired={true} inputClassName="sobrenome" label ="Sobrenome" placeholder="Digite seu sobrenome."
-            value={sobrenome} setter={setSobrenome} /></Col>
+            value={sobrenome} setter={setSobrenome} onlyLetters /></Col>
           </Row>
           <Row>
             <Col><DropdownLists inputClassName="sexo" label="Sexo" itens={listaGenero}
             value={genero} setter={setGenero}  /></Col>
-            <Col><DropdownLists inputClassName="estado-civil" label="Estado Civil"  itens={listaEstadoCivil}
+            <Col><DropdownLists inputClassName="estado-civil" label="Estado Civil" itens={listaEstadoCivil}
             value={estadoCivil} setter={setEstadoCivil}  /></Col>
           </Row>
           <Row>
             <Col><TextFields  inputLength = {14} isRequired={true} inputClassName="cpf" label="CPF" placeholder="Digite seu CPF."
-            value={cpf} setter={setCPF}  /></Col>
+            value={cpf} setter={setCPF}  onlyNumbers /></Col>
             <Col><TextFields  inputLength = {9}  isRequired={true} inputClassName="rg" label="RG" placeholder="Digite seu RG."
-            value={rg} setter={setRG}  /></Col>
+            value={rg} setter={setRG} onlyNumbers /></Col>
           </Row>
           <TextFields inputLength = {45} isRequired={true} inputClassName="rua" label="Endereço" placeholder="Digite sua rua."
-          value={rua} setter={setRua}  />
+          value={rua} setter={setRua} onlyLetters  />
           <Row>
             <Col><TextFields inputLength = {10} isRequired={true} inputClassName="complemento" placeholder="Complemento."
-            value={complemento} setter={setComplemento}  /></Col>
+            value={complemento} setter={setComplemento} onlyLetters  /></Col>
             <Col><TextFields inputLength = {10} isRequired={true} inputClassName="numero-residencia" placeholder="Número."
-            value={numero} setter={setNumero}  /></Col>
+            value={numero} setter={setNumero} onlyNumbers  /></Col>
           </Row>
           
           <Row>
             <Col><TextFields inputLength = {45} isRequired={true} inputClassName="cidade" placeholder="Digite sua cidade."
-            value={cidade} setter={setCidade}  /></Col>
+            value={cidade} setter={setCidade} onlyLetters /></Col>
             <Col><TextFields inputLength = {15} isRequired={true} inputClassName="estado" placeholder="Digite seu estado."
-            value={estado} setter={setEstado}  /></Col>
+            value={estado} setter={setEstado} onlyLetters /></Col>
             <Col><TextFields inputLength = {10} isRequired={true} inputClassName="pais" placeholder="Digite seu pais."
-            value={pais} setter={setPais}  /></Col>
+            value={pais} setter={setPais} onlyLetters  /></Col>
           </Row>
           <Row>
             <Col><TextFields inputLength = {50} isRequired={true} inputClassName="email" label="E-mail" placeholder="Digite seu E-mail."
             value={email} setter={setEmail}  /></Col>
             <Col><TextFields inputLength = {20} isRequired={true} inputClassName="n-telefone" label="Numero de telefone" placeholder="Digite seu telefone."
-            value={telefone} setter={setTelefone}  /></Col>
+            value={telefone} setter={setTelefone} onlyNumbers /></Col>
             <Col><TextFields inputLength = {15} isRequired={true} inputClassName="senha" label="Senha" placeholder="Digite uma senha."
             value={senha} setter={setSenha}  /></Col>
           </Row>

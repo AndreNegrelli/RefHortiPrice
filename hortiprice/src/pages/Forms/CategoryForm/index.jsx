@@ -30,7 +30,7 @@ const CategoryForm = () => {
                 <form>
                     <h2>Cadastre novas categorias</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="categoria"  label="Categoria" placeholder="Digite aqui a nova categoria." 
-                    value ={categoria} setter = {setCategoria}/>
+                    value ={categoria} setter = {setCategoria} onlyLetters  />
                     <Buttons  customButton = "button-category" text="Inserir" funcaoBotao = {cadastrarCategoria}  />
                 </form>
             </Container>
