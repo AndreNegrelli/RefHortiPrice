@@ -5,12 +5,35 @@ import TextFields from "../../../components/TextFields"
 import "./ActivityForm.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { db } from "../../../firebaseConnection";
-import {addDoc, collection} from 'firebase/firestore'
+import {addDoc, collection, getDocs} from 'firebase/firestore'
 import { useState } from "react";
 
 const ActivityForm = () => {
 
-    const teste = ["teste1", "teste2"];
+    const [custo, setCusto] = useState("")
+
+    async function searchCusto(custo, e) {
+        e.preventDefault();
+        const collectionRef = collection(db, custo);
+        await getDocs(collectionRef)
+          .then((snapshot) => {
+            let lista = [];
+      
+            snapshot.forEach((doc) => {
+              lista.push({
+                id: doc.id,
+                custo: doc.data().custo,
+              });
+            });
+      
+            setCusto(lista);
+          })
+          .catch((error) => {
+            console.log("DEU ALGUM ERRO AO BUSCAR");
+          });
+      }
+
+
     const [descricao, setDescricao] = useState("")
     const [quantidade, setQuantidade] = useState("")
 
@@ -18,11 +41,13 @@ const ActivityForm = () => {
         e.preventDefault()
         await addDoc(collection(db, "atividade"), {
             descricao: descricao,
-            quantidade: quantidade
+            quantidade: quantidade,
+            custo: custo
         })
         .then(() => {
             setDescricao("")
             setQuantidade("")
+            setCusto("")
         })
         .catch((error) => {
 
@@ -39,9 +64,9 @@ const ActivityForm = () => {
                         <Col><TextFields inputLength = {20} isRequired = {true} inputClassName="quantidade-atividade"  label="Quantidade" placeholder="Quantidade."
                          value = {quantidade} setter ={setQuantidade } onlyNumbers /></Col>
                     <Row>
-                        <Col><DropdownLists inputClassName="custo-atividade" label="Custo" itens={teste}/></Col>
-                        <Col><DropdownLists inputClassName="direcionador-atividade" label="Direcionador" itens={teste}/></Col>
-                        <Col><DropdownLists inputClassName="Unidade-atividade" label="Unidade" itens={teste}/></Col>
+                        <Col><DropdownLists collectionName="custo" fieldName = "custo" inputClassName="custo-atividade" setter={setCusto} value={custo} label="Custo" itens={searchCusto}/></Col>
+                        <Col><DropdownLists inputClassName="direcionador-atividade" label="Direcionador" itens={searchCusto}/></Col>
+                        <Col><DropdownLists inputClassName="Unidade-atividade" label="Unidade" itens={searchCusto}/></Col>
                     </Row>
                     <Buttons  customButton = "button-activityform" text="Inserir" funcaoBotao = {cadastrarAtividade}  />
                 </form>
