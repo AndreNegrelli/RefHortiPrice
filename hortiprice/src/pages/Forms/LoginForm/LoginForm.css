@@ -1,10 +1,8 @@
 .login-form{
-    max-width: 80%;
+    max-width: 36%;
     display: grid;
-    justify-content: center;
     margin: 80px 0;
-    margin-left: 218px;
-    margin-right: 60px;
+    margin-left: 620px;
 }
 
 .login-form form{

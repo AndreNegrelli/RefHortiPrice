@@ -7,7 +7,7 @@
   
   .menu-items {
     position: relative;
-    font-size: 18px;
+    font-size: 22px;
   }
   
   .menu-items a {
@@ -39,6 +39,6 @@
   
   .menu-items a:hover,
   .menu-items button:hover {
-    background-color: #fffdfd;
+    background-color: #eeeeee;
   }
   

@@ -24,7 +24,7 @@ const CostForm = () => {
         <section className="cost-form">
             <Container>
                 <form onSubmit={cadastrarCusto}>
-                    <h2>Cadastre</h2>
+                    <h2>Cadastre novos custos</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="custo"  label="Custo" placeholder="Digite aqui um novo custo." 
                     value ={custo} setter={setCusto} onlyLetters />
                     <Buttons  customButton = "button-cost" text="Inserir"  />

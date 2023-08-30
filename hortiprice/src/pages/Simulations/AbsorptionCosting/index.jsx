@@ -10,8 +10,7 @@ const AbsortionCosting = () => {
     const teste = ["teste1", "teste2"];
     
     return (
-        <section className="absortion-costing">
-            <Container>
+            <Container className="absortion-costing">
             <form>
                 <h2>Custeio por absorção</h2>
                     <DropdownLists inputClassName="tipo-absorcao" label="Custo" itens={teste}/>
@@ -23,7 +22,6 @@ const AbsortionCosting = () => {
                     <Buttons  customButton = "button-absortioncosting" text="Inserir"  />
                 </form>
             </Container>
-        </section>
     )
 }
 

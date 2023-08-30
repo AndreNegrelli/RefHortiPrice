@@ -1,6 +1,7 @@
 import DropdownLinks from "../DropdownLinks"
 import { useState, useEffect, useRef } from "react";
 import './MenuItemsHeader.css'
+import { Link } from "react-router-dom";
 
 const MenuItemsHeader = ({items}) => {
     const [dropdown, setDropdown] = useState(false)
@@ -40,7 +41,7 @@ const MenuItemsHeader = ({items}) => {
                     <DropdownLinks submenus={items.submenu} dropdown={dropdown} />
                 </>
             ):(
-                <a href={items.url}>{items.title}</a>
+                <Link to={items.url}>{items.title} </Link>
             )}
         </li>
     )

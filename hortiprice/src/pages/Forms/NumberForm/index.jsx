@@ -24,7 +24,7 @@ const NumberForm = () => {
        <section className='number-form'>
             <Container>
                 <form onSubmit={cadastrarUnidade}>
-                    <h2>Cadastro de unidade</h2>
+                    <h2>Cadastro de unidades</h2>
                     <TextFields inputLength = {30} isRequired={true} inputClassName="unidade" label="Unidade" placeholder="Descrição." 
                     value ={unidade} setter={setUnidade} onlyLetters />
                     <Buttons customButton="button-number" text = "Inserir" funcaoBotao ={cadastrarUnidade}/>

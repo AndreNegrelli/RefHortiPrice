@@ -34,8 +34,7 @@ const ContactForm = () => {
         })
     }
     return (
-       <section className='contact-form'>
-        <Container>
+        <Container className='contact-form'>
         <form onSubmit={Contato}>
             <h2>Preencha com seus dados para entrar em contato</h2>
             <TextFields inputLength = {15} isRequired = {true} inputClassName="nome"  label="Nome" placeholder="Digite seu nome."
@@ -48,10 +47,7 @@ const ContactForm = () => {
             value={mensagem} setter={setMensagem}  />
             <Buttons customButton="button-contato" text = "Enviar" funcaoBotao={Contato}/>
         </form>
-
         </Container>
-        
-       </section>
     )
 
 }

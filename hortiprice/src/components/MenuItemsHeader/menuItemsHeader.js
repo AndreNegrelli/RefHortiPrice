@@ -1,7 +1,7 @@
 export const menuItemsHeader = [
     {
         title: 'Home',
-        url:'/'
+        url:'/home'
     },
     {
         title: 'Cadastro',
@@ -69,16 +69,16 @@ export const menuItemsHeader = [
         title: 'Relatorios',
         submenu:[
             {
+                title: 'Custo ABC',
+                url: 'relatorioabc'
+            },
+            {
                 title: 'Custo de Produção',
                 url: 'relatoriocusto'
             },
             {
                 title: 'Custo Unitario',
                 url: 'relatoriounitario'
-            },
-            {
-                title: 'Custo ABC',
-                url: 'relatorioabc'
             },
             {
                 title: 'Total por Custo',
@@ -89,5 +89,6 @@ export const menuItemsHeader = [
     },
     {
         title: 'Sair',
+        url: '/login'
     }
 ]

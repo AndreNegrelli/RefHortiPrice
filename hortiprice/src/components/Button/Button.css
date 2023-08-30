@@ -1,5 +1,4 @@
 .button {
-    background-color: #3FDD58;
     border-radius: 15px;
     font-weight: 500;
     font-size: 20px;
@@ -8,40 +7,43 @@
     cursor: pointer;
     color: #000000;
     margin: 8px;
-    margin-left: 325px;
+    background: linear-gradient(to right,rgb(35, 255, 150), rgb(89, 255, 176), rgb(143, 255, 202));
 }
 
 .button-contato{
-    margin-left: 230px;
-}
-
-.button-login{
-    margin-left: 225px;
-}
-
-.button-area{
-    margin-left: 85px;
+    margin-left: 194px;
     width: 150px;
 }
 
+.button-login{
+    margin-left: 194px;
+    width: 150px;
+}
+
+.button-area{
+    margin-left: 194px;
+    width: 150px;
+}
+
+
 .button-category{
-    margin-left: 115px;
+    margin-left: 194px;
     width: 150px;
 }
 
 .button-subcategory{
-    margin-left: 145px;
+    margin-left: 194px;
     width: 150px;
 }
 
 .button-typeform{
-    margin-left: 95px;
+    margin-left: 194px;
     width: 150px;
 }
 
 .button-number{
-    margin-left: 65px;
-    width: 100px;
+    margin-left: 194px;
+    width: 150px;
 }
 
 .button-componentform{
@@ -49,37 +51,134 @@
 }
 
 .button-productivityform{
-    margin-left: 190px;
+    margin-left: 194px;
     width: 150px;
 }
 
-.button-redirector, .button-totalreport{
-    margin-left: 128px;
+.button-redirector{
+    width: 150px;
+    margin-left: 194px;
+}
+
+.button-totalreport{
+    width: 150px;
+    margin-left: 194px;
 }
 
 .button-activityform{
-    margin-left: 160px;
+    width: 150px;
+    margin-left: 194px;
 }
 
 .button-absortioncosting{
-    margin-left: 100px;
+    margin-left: 194px;
+    width: 150px;
 }
 
-.button-variablecosting, .button-costingabc, .button-costreport, .button-abcreport{
-    margin-left: 80px;
+.button-variablecosting, .button-abcreport{
+    width: 150px;
+    margin-left: 194px;
+}
+
+.button-costreport{
+    width: 150px;
+    margin-left: 194px;
+}
+
+.button-abcreport{
+    width: 150px;
+    margin-left: 194px;
+}
+
+.button-costingabc{
+    width: 150px;
+    margin-left: 194px;
 }
 
 .button-costunit, .button-changepassword{
-    margin-left: 110px;
+    width: 150px;
+    margin-left: 194px;
+}
+
+.button-changepassword{
+    width: 150px;
+    margin-left: 194px;
 }
 
 .button-forgotpassword{
-    margin-left: 235px;
+    margin-left: 194px;
+    width: 150px;
 }
 
 .button-cost{
-    margin-left: 515px;
+    width: 150px;
+    margin-left: 194px;
 }
+
+.button-homeregister{
+    width: 500px;
+    margin-left: 90px;
+    border-radius: 5px;
+    padding: 100px;
+    font-size: 50px;
+}
+
+.button-homesimulations{
+    width: 500px;
+    border-radius: 5px;
+    padding: 100px;
+    font-size: 50px;
+}
+
+.button-homereport{
+    width: 500px;
+    margin-left: 350px;
+    border-radius: 5px;
+    padding: 100px;
+    font-size: 50px;
+}
+
+.button-reportsabc, .button-reportcost, .button-reportunit, .button-reporttotal{
+    width: 400px;
+    padding: 60px;
+    margin-left: 126px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.button-simulationsabc{
+    width: 480px;
+    margin-left: 126px;
+    border-radius: 5px;
+    padding: 60px;
+    font-size: 35px;
+}
+
+.button-simulationscost{
+    width: 480px;
+    border-radius: 5px;
+    padding: 60px;
+    font-size: 35px;
+}
+
+.button-simulationunit{
+    width: 480px;
+    margin-left: 358px;
+    border-radius: 5px;
+    padding: 60px;
+    font-size: 35px;
+
+}
+
+.button-formsarea, .button-formsatividade, .button-formscategoria, .button-formscomponente, .button-formscusto, .button-formsdirecionador, .button-formsprodutividade, 
+.button-formssubcategoria, .button-formstipo, .button-formsunidade{
+    width: 400px;
+    padding: 60px;
+    margin-left: 126px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
 
 .button:hover{
     color: #ffffff;

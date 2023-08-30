@@ -24,6 +24,10 @@ import ChangePasswordForm from "../../pages/Forms/ChangePasswordForm";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Help from "../../pages/Help";
+import Home from "../../pages/Home";
+import Reports from "../../pages/Reports/ReportsPage/index,";
+import Simulations from "../../pages/Simulations/SimulationsPage";
+import Forms from "../../pages/Forms/FormsPage";
 
 
 
@@ -55,6 +59,10 @@ const Routing = () => {
                 <Route element = {<ForgotPasswordForm/>} path="/esqueceusenha"/>
                 <Route element = {<ChangePasswordForm/>} path="/mudarsenha"/>
                 <Route element = {<Help/>} path="/ajuda"/>
+                <Route element = {<Home/>} path="/home"/>
+                <Route element = {<Reports/>} path="/relatorios"/>
+                <Route element = {<Simulations/>} path="/simulacoes"/>
+                <Route element = {<Forms/>} path="/cadastros"/>
             </Routes>
             <Footer/>
         </BrowserRouter>

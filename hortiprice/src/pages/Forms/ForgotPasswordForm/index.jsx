@@ -28,7 +28,7 @@ const ForgotPasswordForm = () => {
                     <h2>Digite seu e-mail para trocar sua senha</h2>
                     <TextFields inputLength = {15} isRequired = {true} inputClassName="email-forgotp"  label="E-mail" placeholder="Digite aqui seu e-mail." 
                     value={email} setter={setEmail} />
-                    <Buttons  emailmButton = "button-forgotpassword" text="Enviar" funcaoBotao ={esqueceuSenha} />
+                    <Buttons  customButton = "button-forgotpassword" text="Enviar" funcaoBotao ={esqueceuSenha} />
                 </form>
             </Container>
         </section>

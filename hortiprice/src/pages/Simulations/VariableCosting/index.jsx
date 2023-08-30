@@ -10,8 +10,7 @@ const VariableCosting = () => {
     const teste = ["teste1", "teste2"];
     
     return (
-        <section className="variable-costing">
-            <Container>
+        <Container className="variable-costing">
             <form>
                 <h2>Custeio Variavel</h2>
                     <DropdownLists inputClassName="tipo-variable" label="Custo" itens={teste}/>
@@ -21,9 +20,8 @@ const VariableCosting = () => {
                     </Row>
                     <TextFields inputLength = {20} isRequired = {true} inputClassName="descricao-variable"  label=" " placeholder=" "/>
                     <Buttons  customButton = "button-variablecosting" text="Inserir"  />
-                </form>
-            </Container>
-        </section>
+            </form>
+        </Container>
     )
 }
 

@@ -10,45 +10,18 @@ const CostingABC = () => {
   const teste = ["teste1", "teste2"];
  
   return (
-    <section className="costing-abc">
-      <Container>
+      <Container className="costing-abc">
         <form>
           <h2>Custeio ABC</h2>
-          <DropdownLists
-            inputClassName="tipo-abc"
-            label="Custo"
-            itens={teste}
-          />
+          <DropdownLists inputClassName="tipo-abc" label="Custo"itens={teste}/>
           <Row>
-            <Col>
-              <DropdownLists
-                inputClassName="mês-abc"
-                label="Mês"
-                itens={teste}
-              />
-            </Col>
-            <Col>
-              <DropdownLists
-                inputClassName="ano-abc"
-                label="Ano"
-                itens={teste}
-              />
-            </Col>
+            <Col><DropdownLists inputClassName="mês-abc" label="Mês" itens={teste}/></Col>
+            <Col><DropdownLists inputClassName="ano-abc" label="Ano" itens={teste}/></Col>
           </Row>
-          <TextFields
-            inputLength={20}
-            isRequired={true}
-            inputClassName="descricao-abc"
-            label=" "
-            placeholder=" "
-          />
-          <Buttons
-            customButton="button-costingabc"
-            text="Inserir"
-          />
+          <TextFields inputLength={20} isRequired={true} inputClassName="descricao-abc" label=" " placeholder=" "/>
+          <Buttons customButton="button-costingabc" text="Inserir"/>
         </form>
       </Container>
-    </section>
   );
 };
 
