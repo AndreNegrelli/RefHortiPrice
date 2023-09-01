@@ -11,7 +11,7 @@ const NumberForm = () => {
 
     async function cadastrarUnidade(e) {
       e.preventDefault();
-      await addDoc(collection(db, "cadastrounidade"), {
+      await addDoc(collection(db, "unidade"), {
         unidade: unidade,
       })
         .then(() => {
@@ -25,8 +25,8 @@ const NumberForm = () => {
             <Container>
                 <form onSubmit={cadastrarUnidade}>
                     <h2>Cadastro de unidades</h2>
-                    <TextFields inputLength = {30} isRequired={true} inputClassName="unidade" label="Unidade" placeholder="Descrição." 
-                    value ={unidade} setter={setUnidade} onlyLetters />
+                    <TextFields inputLength = {30} required={true} inputClassName="unidade" label="Unidade" placeholder="Descrição." 
+                    value ={unidade} setter={setUnidade} onlyLetters/>
                     <Buttons customButton="button-number" text = "Inserir" funcaoBotao ={cadastrarUnidade}/>
                 </form>
             </Container>

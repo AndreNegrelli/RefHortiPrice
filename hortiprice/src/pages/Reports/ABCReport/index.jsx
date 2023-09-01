@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import Buttons from "../../../components/Button"
-import DropdownLists from "../../../components/DropdownLists"
 import "./ABCReport.css"
 import { useState } from "react";
 import {collection,getDocs} from 'firebase/firestore'
 import { db } from "../../../firebaseConnection";
+import DropdownDB from "../../../components/DropdownDB";
 
 const ABCReport = () => {
 
@@ -43,7 +43,7 @@ const ABCReport = () => {
         <Container>
           <form onSubmit={searchABC}>
             <h2>Relatorio Custo ABC</h2>
-            <DropdownLists
+            <DropdownDB
               inputClassName="relatorio-abc"
               label="Tipo"
               itens={teste}

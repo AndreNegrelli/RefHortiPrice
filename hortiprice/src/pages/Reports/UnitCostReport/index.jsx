@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import Buttons from "../../../components/Button"
-import DropdownLists from "../../../components/DropdownLists"
 import "./UnitCostReport.css"
 import { useState } from "react";
 import {db} from "../../../firebaseConnection"
 import {collection,getDocs} from 'firebase/firestore'
+import DropdownDB from "../../../components/DropdownDB";
 
 const UnitCostReport = () => {
 
@@ -43,7 +43,7 @@ const UnitCostReport = () => {
         <Container>
           <form onSubmit={searchCost}>
             <h2>Relatorio Custo Unitario</h2>
-            <DropdownLists
+            <DropdownDB
               inputClassName="relatorio-custounitario"
               label="Tipo"
               itens={teste}

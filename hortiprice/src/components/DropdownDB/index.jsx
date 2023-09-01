@@ -1,10 +1,10 @@
-import './DropdownLists.css'
+import './DropdownDB.css'
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebaseConnection';
 
 
-const DropdownLists = (props) => {
+const DropdownDB = (props) => {
     const [items, setItems] = useState([]);
     
     useEffect(() => {
@@ -21,11 +21,14 @@ const DropdownLists = (props) => {
     
 
       return (
-        <div className='dropdown-lists'>
+        <div className='dropdown-db'>
           <label>{props.label}</label>
           <select value={props.value} onChange={(e) => props.setter(e.target.value)}>
-            {items.map((item) => (
-              <option key={item}>{item}</option>
+            <option disabled value="">
+              {props.title}
+            </option>
+              {items.map((item) => (
+                <option key={item}>{item}</option>
             ))}
           </select>
         </div>
@@ -33,5 +36,4 @@ const DropdownLists = (props) => {
     
 }
 
-export default DropdownLists
-
+export default DropdownDB

@@ -8,12 +8,11 @@ import { useState } from "react";
 
 const RedirectorForm = () => {
 
-    
     const [direcionador, setDirecionador] = useState("");
 
     async function cadastrarDirecionador(e) {
       e.preventDefault();
-      await addDoc(collection(db, "cadastrodirecionador"), {
+      await addDoc(collection(db, "direcionador"), {
        
         direcionador: direcionador,
       })
@@ -22,7 +21,6 @@ const RedirectorForm = () => {
         })
         .catch((error) => {});
     }
-
 
     return (
         <section className="redirector-form">

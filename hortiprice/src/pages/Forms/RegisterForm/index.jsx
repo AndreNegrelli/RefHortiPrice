@@ -1,22 +1,39 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./RegisterForm.css";
-import {Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from "react-bootstrap";
 import TextFields from "../../../components/TextFields";
-import DropdownLists from "../../../components/DropdownLists";
-import Buttons from '../../../components/Button';
-import { Link } from 'react-router-dom';
+import Buttons from "../../../components/Button";
+import { Link } from "react-router-dom";
 import { db } from "../../../firebaseConnection";
-import {addDoc, collection} from 'firebase/firestore'
+import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
+import DropdownItems from "../../../components/DropdownItems";
+import { useForm } from 'react-hook-form';
 
 const RegisterForm = () => {
 
-  const listaGenero = ["Escolha uma das opções","Masculino", "Feminino", "Outro", "Não informar"]
-  const listaEstadoCivil = ["Escolha uma das opções","Solteiro(a)", "Casado(a)", "Viuvo(a)"]
-  const [genero, setGenero] = useState(listaGenero)
-  const [estadoCivil, setEstadoCivil] = useState(listaEstadoCivil)
+
+  const {register, handleSubmit} = useForm()
+  const listaGenero = [
+    "Masculino",
+    "Feminino",
+    "Outro",
+    "Não informar",
+  ];
+  const listaEstadoCivil = [
+    "Solteiro(a)",
+    "Casado(a)",
+    "Viuvo(a)",
+  ];
+
+  const onSubmit = (data) => {
+    console.log(data)
+  }
+
+  const [genero, setGenero] = useState("");
+  const [estadoCivil, setEstadoCivil] = useState("");
   const [nome, setNome] = useState("");
-  const [sobrenome, setSobrenome] = useState("")
+  const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCPF] = useState("");
   const [rg, setRG] = useState("");
   const [rua, setRua] = useState("");
@@ -28,7 +45,6 @@ const RegisterForm = () => {
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
   const [senha, setSenha] = useState("");
- 
 
   async function cadastrarUsuario(e) {
     e.preventDefault();
@@ -37,8 +53,8 @@ const RegisterForm = () => {
       sobrenome: sobrenome,
       genero: genero,
       estadoCivil: estadoCivil,
-      cpf : cpf,
-      rg : rg,
+      cpf: cpf,
+      rg: rg,
       rua: rua,
       complemento: complemento,
       numero: numero,
@@ -47,83 +63,222 @@ const RegisterForm = () => {
       pais: pais,
       email: email,
       telefone: telefone,
-      senha: senha
+      senha: senha,
     })
       .then(() => {
-        setNome("")
-        setSobrenome("")
-        setGenero("")
-        setEstadoCivil("")
-        setCPF("")
-        setRG("")
-        setRua("")
-        setComplemento("")
-        setNumero("")
-        setCidade("")
-        setEstado("")
-        setPais("")
-        setEmail("")
-        setTelefone("")
-        setSenha("")
+        setNome("");
+        setSobrenome("");
+        setGenero("");
+        setEstadoCivil("");
+        setCPF("");
+        setRG("");
+        setRua("");
+        setComplemento("");
+        setNumero("");
+        setCidade("");
+        setEstado("");
+        setPais("");
+        setEmail("");
+        setTelefone("");
+        setSenha("");
       })
       .catch((error) => {});
   }
 
   return (
-    <section className='register-form'>
+    <section className="register-form">
       <Container>
-        <form onSubmit={cadastrarUsuario}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <h2>Preencha com os dados para se cadastrar</h2>
           <Row>
-            <Col><TextFields  inputLength = {15} isRequired={true} inputClassName="nome"  label="Nome" placeholder="Digite seu nome."
-            value={nome} setter={setNome} onlyLetters/></Col>
-            <Col><TextFields inputLength = {15} isRequired={true} inputClassName="sobrenome" label ="Sobrenome" placeholder="Digite seu sobrenome."
-            value={sobrenome} setter={setSobrenome} onlyLetters /></Col>
+            <Col>
+              <TextFields
+                inputLength={15}
+                isRequired={true}
+                inputClassName="nome"
+                label="Nome"
+                placeholder="Digite seu nome."
+                value={nome}
+                setter={setNome}
+                onlyLetters
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={15}
+                isRequired={true}
+                inputClassName="sobrenome"
+                label="Sobrenome"
+                placeholder="Digite seu sobrenome."
+                value={sobrenome}
+                setter={setSobrenome}
+                onlyLetters
+              />
+            </Col>
           </Row>
           <Row>
-            <Col><DropdownLists inputClassName="sexo" label="Sexo" itens={listaGenero}
-            value={genero} setter={setGenero}  /></Col>
-            <Col><DropdownLists inputClassName="estado-civil" label="Estado Civil" itens={listaEstadoCivil}
-            value={estadoCivil} setter={setEstadoCivil}  /></Col>
+            <Col>
+              <DropdownItems
+                title= "Escolha uma opção"
+                inputClassName="sexo"
+                label="Sexo"
+                items={listaGenero}
+                value={genero}
+                setter={setGenero}
+              />
+            </Col>
+            <Col>
+              <DropdownItems
+                title ="Escolha uma opção"
+                inputClassName="estado-civil"
+                label="Estado Civil"
+                items={listaEstadoCivil}
+                value={estadoCivil}
+                setter={setEstadoCivil}
+              />
+            </Col>
           </Row>
           <Row>
-            <Col><TextFields  inputLength = {14} isRequired={true} inputClassName="cpf" label="CPF" placeholder="Digite seu CPF."
-            value={cpf} setter={setCPF}  onlyNumbers /></Col>
-            <Col><TextFields  inputLength = {9}  isRequired={true} inputClassName="rg" label="RG" placeholder="Digite seu RG."
-            value={rg} setter={setRG} onlyNumbers /></Col>
+            <Col>
+              <TextFields
+                inputLength={11}
+                isRequired={true}
+                inputClassName="cpf"
+                label="CPF"
+                placeholder="Digite seu CPF."
+                value={cpf}
+                setter={setCPF}
+                onlyNumbers
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={9}
+                isRequired={true}
+                inputClassName="rg"
+                label="RG"
+                placeholder="Digite seu RG."
+                value={rg}
+                setter={setRG}
+                onlyNumbers
+              />
+            </Col>
           </Row>
-          <TextFields inputLength = {45} isRequired={true} inputClassName="rua" label="Endereço" placeholder="Digite sua rua."
-          value={rua} setter={setRua} onlyLetters  />
+          <TextFields
+            inputLength={45}
+            isRequired={true}
+            inputClassName="rua"
+            label="Endereço"
+            placeholder="Digite sua rua."
+            value={rua}
+            setter={setRua}
+            onlyLetters
+          />
           <Row>
-            <Col><TextFields inputLength = {10} isRequired={true} inputClassName="complemento" placeholder="Complemento."
-            value={complemento} setter={setComplemento} onlyLetters  /></Col>
-            <Col><TextFields inputLength = {10} isRequired={true} inputClassName="numero-residencia" placeholder="Número."
-            value={numero} setter={setNumero} onlyNumbers  /></Col>
+            <Col>
+              <TextFields
+                inputLength={10}
+                isRequired={true}
+                inputClassName="complemento"
+                placeholder="Complemento."
+                value={complemento}
+                setter={setComplemento}
+                onlyLetters
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={10}
+                isRequired={true}
+                inputClassName="numero-residencia"
+                placeholder="Número."
+                value={numero}
+                setter={setNumero}
+                onlyNumbers
+              />
+            </Col>
           </Row>
-          
+
           <Row>
-            <Col><TextFields inputLength = {45} isRequired={true} inputClassName="cidade" placeholder="Digite sua cidade."
-            value={cidade} setter={setCidade} onlyLetters /></Col>
-            <Col><TextFields inputLength = {15} isRequired={true} inputClassName="estado" placeholder="Digite seu estado."
-            value={estado} setter={setEstado} onlyLetters /></Col>
-            <Col><TextFields inputLength = {10} isRequired={true} inputClassName="pais" placeholder="Digite seu pais."
-            value={pais} setter={setPais} onlyLetters  /></Col>
+            <Col>
+              <TextFields
+                inputLength={45}
+                isRequired={true}
+                inputClassName="cidade"
+                placeholder="Digite sua cidade."
+                value={cidade}
+                setter={setCidade}
+                onlyLetters
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={15}
+                isRequired={true}
+                inputClassName="estado"
+                placeholder="Digite seu estado."
+                value={estado}
+                setter={setEstado}
+                onlyLetters
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={10}
+                isRequired={true}
+                inputClassName="pais"
+                placeholder="Digite seu pais."
+                value={pais}
+                setter={setPais}
+                onlyLetters
+              />
+            </Col>
           </Row>
           <Row>
-            <Col><TextFields inputLength = {50} isRequired={true} inputClassName="email" label="E-mail" placeholder="Digite seu E-mail."
-            value={email} setter={setEmail}  /></Col>
-            <Col><TextFields inputLength = {20} isRequired={true} inputClassName="n-telefone" label="Numero de telefone" placeholder="Digite seu telefone."
-            value={telefone} setter={setTelefone} onlyNumbers /></Col>
-            <Col><TextFields inputLength = {15} isRequired={true} inputClassName="senha" label="Senha" placeholder="Digite uma senha."
-            value={senha} setter={setSenha}  /></Col>
+            <Col>
+              <TextFields
+                inputLength={50}
+                isRequired={true}
+                inputClassName="email"
+                label="E-mail"
+                placeholder="Digite seu E-mail."
+                value={email}
+                setter={setEmail}
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={11}
+                isRequired={true}
+                inputClassName="n-telefone"
+                label="Numero de telefone"
+                placeholder="Digite seu telefone."
+                value={telefone}
+                setter={setTelefone}
+                onlyNumbers
+              />
+            </Col>
+            <Col>
+              <TextFields
+                inputLength={15}
+                isRequired={true}
+                inputClassName="senha"
+                label="Senha"
+                placeholder="Digite uma senha."
+                value={senha}
+                setter={setSenha}
+                {...register("senha")}
+              />
+            </Col>
           </Row>
-          <Buttons text = "Registrar-se" funcaoBotao={cadastrarUsuario}/>
-          <Link className='link' to='/login'>Ja possui conta ?</Link>
-      </form>
-    </Container>
+          <Buttons text="Registrar-se" funcaoBotao={cadastrarUsuario} />
+          <Link className="link" to="/login">
+            Ja possui conta ?
+          </Link>
+        </form>
+      </Container>
     </section>
   );
-  
 };
 
 export default RegisterForm;

@@ -27,8 +27,6 @@ const TextFields = (props) => {
     }
 
 
-
-
     return (
       <div className={`text-fields ${props.customClassName}`}>
         <label>{props.label}</label>
@@ -37,7 +35,6 @@ const TextFields = (props) => {
           value={props.value}
           restriction ={restriction}
           maxLength={props.inputLength}
-          required={props.isRequired}
           className={`input-field ${props.inputClassName}`}
           placeholder={props.placeholder}
           onChange={handleInputChange}

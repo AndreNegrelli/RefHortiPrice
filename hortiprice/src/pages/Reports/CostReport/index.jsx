@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import Buttons from "../../../components/Button"
-import DropdownLists from "../../../components/DropdownLists"
 import "./CostReport.css"
 import { useState } from "react";
 import {db} from "../../../firebaseConnection"
 import {collection,getDocs} from 'firebase/firestore'
+import DropdownDB from "../../../components/DropdownDB";
 
 
 const CostReport = () => {
@@ -46,7 +46,7 @@ const CostReport = () => {
         <Container>
           <form>
             <h2>Relatório de Custo</h2>
-            <DropdownLists
+            <DropdownDB
               inputClassName="relatorio-custo"
               label="Tipo"
               itens={teste}
