@@ -26,12 +26,12 @@ const AreaForm = () => {
     <section className="area-form">
       <Container>
         <form onSubmit={cadastrarArea}>
-          <h2>Cadastre novas areas</h2>
+          <h2>Cadastre novas áreas</h2>
           <TextFields
             inputLength={15}
             inputClassName="area"
-            label="Area"
-            placeholder="Digite aqui a nova area."
+            label="Área"
+            placeholder="Digite aqui a nova área."
             setter={setArea}
             value={area}
             onlyLetters

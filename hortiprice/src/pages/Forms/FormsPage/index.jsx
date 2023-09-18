@@ -7,11 +7,11 @@ const Forms = () =>{
     return (
         <Container className="reports-page">
             <form>
-                <h1 className="h1-forms">Pagina de Cadastros</h1>
+                <h1 className="h1-forms">Página de Cadastros</h1>
                <Row className="row1-forms">
                     <Col>
                         <Link to='/area'>
-                            <Buttons text='Area' customButton= 'button-formsarea'/>
+                            <Buttons text='Àrea' customButton= 'button-formsarea'/>
                         </Link>
                         <Link to='/atividade'>
                             <Buttons text='Atividade' customButton= 'button-formsatividade'/>

@@ -22,7 +22,7 @@ const Home = () =>{
                <Row className="row2">
                     <Col md={{span: 12}}>
                         <Link to='/relatorios'>
-                            <Buttons text='Relatorios' customButton= 'button-homereport'/>
+                            <Buttons text='Relatórios' customButton= 'button-homereport'/>
                         </Link>
                     </Col>
                </Row>

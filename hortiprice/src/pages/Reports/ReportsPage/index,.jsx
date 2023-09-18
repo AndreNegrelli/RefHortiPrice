@@ -7,11 +7,11 @@ const Reports = () =>{
     return (
         <Container className="reports-page">
             <form>
-                <h1 className="h1-reports">Pagina de Relatorios</h1>
+                <h1 className="h1-reports">Página de Relatórios</h1>
                <Row className="row1-reports">
                     <Col>
                         <Link to='/relatorioabc'>
-                            <Buttons text='CustoABC' customButton= 'button-reportsabc'/>
+                            <Buttons text='Custo-ABC' customButton= 'button-reportsabc'/>
                         </Link>
                         <Link to='/relatoriocusto'>
                             <Buttons text='Custo de Produção' customButton= 'button-reportcost'/>
@@ -21,7 +21,7 @@ const Reports = () =>{
                 <Row className="row2-reports">
                     <Col>
                         <Link to='/relatoriounitario'>
-                            <Buttons text='Custo Unitario' customButton= 'button-reportunit'/>
+                            <Buttons text='Custo Unitário' customButton= 'button-reportunit'/>
                         </Link>
                         <Link to='/relatoriototal'>
                             <Buttons text='Total por Custo' customButton= 'button-reporttotal'/>
